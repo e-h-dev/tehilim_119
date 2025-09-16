@@ -1,6 +1,11 @@
-header{
+header,
+footer{
     background-color: #e2e1e1;
-    height:100px;
+    height:70px;
+}
+
+.full-height{
+    height: 100vh
 }
 
 h1{
@@ -20,12 +25,14 @@ p{
     padding:20px;
     text-align:justify;
     direction:rtl;
-    height:100vh;
+    height:72vh;
+    overflow-y: scroll;
 }
 
 .col-3,
 .col-2{
     background-color: #e2e1e1;
+    /* height:100vh; */
 }
 
 button{
