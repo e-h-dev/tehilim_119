@@ -22,7 +22,8 @@ p{
     direction:rtl;
 }
 
-.col-3{
+.col-3,
+.col-2{
     background-color: #e2e1e1;
 }
 
