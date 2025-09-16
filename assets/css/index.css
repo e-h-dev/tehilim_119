@@ -65,9 +65,22 @@ button{
     position: relative;
     top:20vh;
     left:350px;
+    height:20px;
+    width:20px;
     font-size: 2rem;
     color:#fff;
     font-weight: bolder;
     cursor: pointer;
 }
 
+/* .close-submit:hover{
+    animation: spin 2s;
+}
+
+@keyframes spin {
+   50%{transform: rotate(360deg);}
+} */
+
+.close-submit:hover{
+    color:black;
+}
