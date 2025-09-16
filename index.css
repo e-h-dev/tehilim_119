@@ -53,3 +53,13 @@ button{
     top:50vh;
 }
 
+.close-submit{
+    position: relative;
+    top:20vh;
+    left:350px;
+    font-size: 2rem;
+    color:#fff;
+    font-weight: bolder;
+    cursor: pointer;
+}
+

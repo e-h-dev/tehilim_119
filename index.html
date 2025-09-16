@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- div to block obver text when input select button shows -->
-    <div class="block-out" id="overlay" onclick="closeSubmit()">
+    <div class="block-out" id="overlay">
         <!-- code using bootstrap to place the input enquiry box -->
         <div class="row">
             <div class="col-4"></div>
@@ -21,7 +21,9 @@
                     <input type="text">
                 </div>
             </div>
-            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="close-submit" onclick="closeSubmit()">X</div>
+            </div>
         </div>
     </div>
     <header></header>
