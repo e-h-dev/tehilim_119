@@ -244,6 +244,8 @@ const orderedPar = {
 // console.log(orderedPar.ב)
 // console.log(orderedPar.ן)
 
+//important
+
 function requestedPessukim(subbed, orderedPar){
     const result = [];
     for (let s of subbed){
@@ -257,8 +259,18 @@ function requestedPessukim(subbed, orderedPar){
 let mySelection = requestedPessukim(submission, orderedPar)
 
 for (let my in mySelection){
-    console.log(`${my}: ${mySelection[my]}`)
-}
+        // console.log(`${my}: ${mySelection[my]}`)
+        if (mySelection.hasOwnProperty(my)) {
+            // console.log(`${p}: ${orderedPar[p]}`);
+            const div = document.createElement("div");
+            div.innerHTML = `<p>${mySelection[my]}</p>`;
+            selected.appendChild(div);
+        }
+    }
+
+// for (let my in mySelection){
+//     console.log(`${my}: ${mySelection[my]}`)
+// }
 
 
 
@@ -272,16 +284,35 @@ function closeSubmit(){
 
 function mainEngine(){
     mainLoad.style = "display:none";
-    // let submission = interact.value;
-    // console.log(submission)
-    for (let p in orderedPar) {
-    if (orderedPar.hasOwnProperty(p)) {
-        console.log(`${p}: ${orderedPar[p]}`);
-        const div = document.createElement("div");
-        div.innerHTML = `<h3>${p}</h3> <p>${orderedPar[p]}</p>`;
-        selected.appendChild(div);
+    function requestedPessukim(subbed, orderedPar){
+        const result = [];
+        for (let s of subbed){
+            if (orderedPar[s]){
+                result.push(`${s}: ${orderedPar[s]}`)
+            }
+        }
+        return result;
     }
-}
+
+    let mySelection = requestedPessukim(submission, orderedPar)
+
+    for (let my in mySelection){
+        // console.log(`${my}: ${mySelection[my]}`)
+        if (mySelection.hasOwnProperty(my)) {
+            // console.log(`${p}: ${orderedPar[p]}`);
+            const div = document.createElement("div");
+            div.innerHTML = `<h3>${p}</h3> <p>${orderedPar[p]}</p>`;
+            selected.appendChild(div);
+        }
+    }
+    // for (let p in orderedPar) {
+    //     if (orderedPar.hasOwnProperty(p)) {
+    //         console.log(`${p}: ${orderedPar[p]}`);
+    //         const div = document.createElement("div");
+    //         div.innerHTML = `<h3>${p}</h3> <p>${orderedPar[p]}</p>`;
+    //         selected.appendChild(div);
+    //     }
+    // }
 }
 
 function loadNewText(){

@@ -19,12 +19,20 @@ h1, h3{
 p{
     font-family: Noto Serif Hebrew;
     font-size: larger;
+    
 }
 
 .main, .selected{
     padding:20px;
     text-align:justify;
     direction:rtl;
+}
+
+.selected p::first-letter{
+    font-size: 1.5em;
+    color:#494646;
+    font-weight: bolder;
+    padding-left: 50px;
 }
 
 .col-3,
