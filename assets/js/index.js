@@ -3,13 +3,14 @@ let mainLoad = document.getElementById("main-load");
 let selected = document.getElementById("selected");
 let interact = document.getElementById("interact");
 let submit = document.getElementById("submit");
+let submission = interact.value;
 
-function test(){
-    let submission = interact.value;
-    console.log(submission)
-}
+// function test(){
+//     let submission = interact.value;
+//     console.log(submission)
+// }
 
-submit.addEventListener("click", test);
+// submit.addEventListener("click", test);
 
 // submit.addEventListener("click", closeSubmit);
 
@@ -242,6 +243,22 @@ const orderedPar = {
 // console.log(orderedPar.י)
 // console.log(orderedPar.ב)
 // console.log(orderedPar.ן)
+
+function requestedPessukim(subbed, orderedPar){
+    const result = [];
+    for (let s of subbed){
+        if (orderedPar[s]){
+            result.push(`${s}: ${orderedPar[s]}`)
+        }
+    }
+    return result;
+}
+
+let mySelection = requestedPessukim(submission, orderedPar)
+
+for (let my in mySelection){
+    console.log(`${my}: ${mySelection[my]}`)
+}
 
 
 
