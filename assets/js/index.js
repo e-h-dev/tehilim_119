@@ -4,6 +4,15 @@ let selected = document.getElementById("selected");
 let interact = document.getElementById("interact");
 let submit = document.getElementById("submit");
 
+function test(){
+    let submission = interact.value;
+    console.log(submission)
+}
+
+submit.addEventListener("click", test);
+
+// submit.addEventListener("click", closeSubmit);
+
 const orderedPar = {
     א:` א. אַשְׁרֵי תְמִימֵי־דָרֶךְ הַהֹלְכִים בְּתוֹרַת יְהוָה׃
         ב. אַשְׁרֵי נֹצְרֵי עֵדֹתָיו בְּכָל־לֵב יִדְרְשׁוּהוּ׃
@@ -244,8 +253,10 @@ function closeSubmit(){
     overLay.style = "display:none";
 }
 
-function clearMainText(){
+function mainEngine(){
     mainLoad.style = "display:none";
+    // let submission = interact.value;
+    // console.log(submission)
     for (let p in orderedPar) {
     if (orderedPar.hasOwnProperty(p)) {
         console.log(`${p}: ${orderedPar[p]}`);
