@@ -1,6 +1,8 @@
 let overLay = document.getElementById("overlay");
 let mainLoad = document.getElementById("main-load");
-let selected = document.getElementById("selected")
+let selected = document.getElementById("selected");
+let interact = document.getElementById("interact");
+let submit = document.getElementById("submit");
 
 const orderedPar = {
     א:` א. אַשְׁרֵי תְמִימֵי־דָרֶךְ הַהֹלְכִים בְּתוֹרַת יְהוָה׃
