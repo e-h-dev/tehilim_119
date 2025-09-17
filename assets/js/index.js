@@ -1,18 +1,18 @@
+// variable for grey overlay
 let overLay = document.getElementById("overlay");
+// variable to call main text appearing on load
 let mainLoad = document.getElementById("main-load");
+// variable for text selected by user
 let selected = document.getElementById("selected");
-let interact = document.getElementById("interact");
+// variable to retrieve value put in by user
+// let submission = document.getElementById("interact").value;
+// variable to control submission
 let submit = document.getElementById("submit");
-let submission = interact.value;
+// user input vallue
+// let submission = interact.value;
 
-// function test(){
-//     let submission = interact.value;
-//     console.log(submission)
-// }
 
-// submit.addEventListener("click", test);
-
-// submit.addEventListener("click", closeSubmit);
+// object storing the entire perek
 
 const orderedPar = {
     א:` א. אַשְׁרֵי תְמִימֵי־דָרֶךְ הַהֹלְכִים בְּתוֹרַת יְהוָה׃
@@ -236,54 +236,56 @@ const orderedPar = {
                         קעו. תָּעִיתִי כְּשֶׂה אֹבֵד בַּקֵּשׁ עַבְדֶּךָ כִּי מִצְוֺתֶיךָ לֹא שָׁכָחְתִּי׃`,
 }
 
-// console.log(orderedPar.פ)
-// console.log(orderedPar.ל)
-// console.log(orderedPar.ו)
-// console.log(orderedPar.נ)
-// console.log(orderedPar.י)
-// console.log(orderedPar.ב)
-// console.log(orderedPar.ן)
+
 
 //important
 
-function requestedPessukim(subbed, orderedPar){
-    const result = [];
-    for (let s of subbed){
-        if (orderedPar[s]){
-            result.push(`${s}: ${orderedPar[s]}`)
-        }
-    }
-    return result;
-}
-
-let mySelection = requestedPessukim(submission, orderedPar)
-
-for (let my in mySelection){
-        // console.log(`${my}: ${mySelection[my]}`)
-        if (mySelection.hasOwnProperty(my)) {
-            // console.log(`${p}: ${orderedPar[p]}`);
-            const div = document.createElement("div");
-            div.innerHTML = `<p>${mySelection[my]}</p>`;
-            selected.appendChild(div);
-        }
-    }
-
-// for (let my in mySelection){
-//     console.log(`${my}: ${mySelection[my]}`)
+// function requestedPessukim(subbed, orderedPar){
+//     const result = [];
+//     for (let s of subbed){
+//         if (orderedPar[s]){
+//             result.push(`${s}: ${orderedPar[s]}`)
+//         }
+//     }
+//     return result;
 // }
 
+// let mySelection = requestedPessukim(submission, orderedPar)
 
+// for (let my in mySelection){
+//         // console.log(`${my}: ${mySelection[my]}`)
+//         if (mySelection.hasOwnProperty(my)) {
+//             // console.log(`${p}: ${orderedPar[p]}`);
+//             const div = document.createElement("div");
+//             div.innerHTML = `<p>${mySelection[my]}</p>`;
+//             selected.appendChild(div);
+//         }
+//     }
+
+
+submit.addEventListener("click", mainEngine)
+submit.addEventListener("click", closeSubmit)
+
+let submission = document.getElementById("interact").value;
+
+// function to open grey overlay
 
 function createSubmit(){
     overLay.style = "display:block";
 }
 
+// function to close grey overlay
 function closeSubmit(){
     overLay.style = "display:none";
 }
 
+
+// main function to run program
 function mainEngine(){
+    //closes loaded text
     mainLoad.style = "display:none";
+
+    // function to take inputed text and convert to pessukim
     function requestedPessukim(subbed, orderedPar){
         const result = [];
         for (let s of subbed){
@@ -294,27 +296,25 @@ function mainEngine(){
         return result;
     }
 
+    // variable taking the pessukim retrived from above function
     let mySelection = requestedPessukim(submission, orderedPar)
 
+    // loops over requested sets of pessukim preparing them for display
     for (let my in mySelection){
         // console.log(`${my}: ${mySelection[my]}`)
         if (mySelection.hasOwnProperty(my)) {
             // console.log(`${p}: ${orderedPar[p]}`);
             const div = document.createElement("div");
-            div.innerHTML = `<h3>${p}</h3> <p>${orderedPar[p]}</p>`;
+            div.innerHTML = `<p>${mySelection[my]}</p>`;
             selected.appendChild(div);
         }
     }
-    // for (let p in orderedPar) {
-    //     if (orderedPar.hasOwnProperty(p)) {
-    //         console.log(`${p}: ${orderedPar[p]}`);
-    //         const div = document.createElement("div");
-    //         div.innerHTML = `<h3>${p}</h3> <p>${orderedPar[p]}</p>`;
-    //         selected.appendChild(div);
-    //     }
-    // }
+    
 }
+
 
 function loadNewText(){
     
 }
+
+console.log(submission)
