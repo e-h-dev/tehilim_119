@@ -67,6 +67,10 @@ button{
     top:50vh;
 }
 
+#clear-btn{
+    display:none;
+}
+
 .close-submit{
     position: relative;
     top:20vh;
