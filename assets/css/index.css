@@ -71,6 +71,10 @@ button{
     opacity:0;
 }
 
+#print-btn{
+    top:30px;
+}
+
 .close-submit{
     position: relative;
     top:20vh;
