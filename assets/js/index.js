@@ -286,13 +286,15 @@ function mainEngine(){
     closeSubmit();
     newHeader();
     document.getElementById("submit-btn").style = "display:none";
-    document.getElementById("clear-btn").style = "display:block";
-    
+    document.getElementById("clear-btn").style = "opacity:1";
 }
 
 function clearLoad(){
-    selected.style = "display:none";
-    mainLoad.style = "display:block";
-    subName.innerHTML = "";
+    location.reload()
+}
+
+function printText(){
+    window.print()
+    document.getElementsByClassName("btn").style = "display:none";
 }
 

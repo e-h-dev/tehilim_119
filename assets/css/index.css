@@ -68,7 +68,7 @@ button{
 }
 
 #clear-btn{
-    display:none;
+    opacity:0;
 }
 
 .close-submit{
@@ -93,4 +93,12 @@ button{
 
 .close-submit:hover{
     color:black;
+}
+
+@media print{
+    #print-btn,
+    #submit-btn,
+    #clear-btn{
+       display:none;
+    }
 }
