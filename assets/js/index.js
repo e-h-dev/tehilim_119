@@ -4,12 +4,8 @@ let overLay = document.getElementById("overlay");
 let mainLoad = document.getElementById("main-load");
 // variable for text selected by user
 let selected = document.getElementById("selected");
-// variable to retrieve value put in by user
-// let submission = document.getElementById("interact").value;
-// variable to control submission
+// variable for submit button
 let submit = document.getElementById("submit");
-// user input vallue
-// let submission = interact.value;
 
 
 // object storing the entire perek
@@ -236,40 +232,7 @@ const orderedPar = {
                         קעו. תָּעִיתִי כְּשֶׂה אֹבֵד בַּקֵּשׁ עַבְדֶּךָ כִּי מִצְוֺתֶיךָ לֹא שָׁכָחְתִּי׃`,
 }
 
-
-
-//important
-
-// function requestedPessukim(subbed, orderedPar){
-//     const result = [];
-//     for (let s of subbed){
-//         if (orderedPar[s]){
-//             result.push(`${s}: ${orderedPar[s]}`)
-//         }
-//     }
-//     return result;
-// }
-
-// let mySelection = requestedPessukim(submission, orderedPar)
-
-// for (let my in mySelection){
-//         // console.log(`${my}: ${mySelection[my]}`)
-//         if (mySelection.hasOwnProperty(my)) {
-//             // console.log(`${p}: ${orderedPar[p]}`);
-//             const div = document.createElement("div");
-//             div.innerHTML = `<p>${mySelection[my]}</p>`;
-//             selected.appendChild(div);
-//         }
-//     }
-
-
-submit.addEventListener("click", mainEngine)
-submit.addEventListener("click", closeSubmit)
-
-let submission = document.getElementById("interact").value;
-
-// function to open grey overlay
-
+// function to load input form
 function createSubmit(){
     overLay.style = "display:block";
 }
@@ -284,6 +247,16 @@ function closeSubmit(){
 function mainEngine(){
     //closes loaded text
     mainLoad.style = "display:none";
+
+    // variable to retrieve user input
+    let submission = document.getElementById("interact").value;
+    // variable to conect to subheader
+    let subName = document.getElementById("submitted-name");
+
+    // function to create subheader with inputed name
+        function newHeader(){
+        subName.innerHTML = `${submission}`
+    }
 
     // function to take inputed text and convert to pessukim
     function requestedPessukim(subbed, orderedPar){
@@ -309,12 +282,15 @@ function mainEngine(){
             selected.appendChild(div);
         }
     }
+    closeSubmit();
+    newHeader();
     
 }
 
 
-function loadNewText(){
-    
+function clear(){
+    submit.style = "display:none";
+    mainLoad.style = "display:block";
 }
 
 console.log(submission)
