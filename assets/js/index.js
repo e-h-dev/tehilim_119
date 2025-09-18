@@ -6,6 +6,8 @@ let mainLoad = document.getElementById("main-load");
 let selected = document.getElementById("selected");
 // variable for submit button
 let submit = document.getElementById("submit");
+// variable to conect to subheader
+const subName = document.getElementById("submitted-name");
 
 
 // object storing the entire perek
@@ -250,8 +252,7 @@ function mainEngine(){
 
     // variable to retrieve user input
     let submission = document.getElementById("interact").value;
-    // variable to conect to subheader
-    let subName = document.getElementById("submitted-name");
+    
 
     // function to create subheader with inputed name
         function newHeader(){
@@ -284,13 +285,13 @@ function mainEngine(){
     }
     closeSubmit();
     newHeader();
+    document.getElementById("submit-btn").style = "display:none";
     
 }
 
-
-function clear(){
-    submit.style = "display:none";
+function clearLoad(){
+    selected.style = "display:none";
     mainLoad.style = "display:block";
+    subName.innerHTML = "";
 }
 
-console.log(submission)
