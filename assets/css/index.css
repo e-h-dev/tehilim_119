@@ -83,12 +83,31 @@ button{
     top:50vh;
 }
 
+#submit-btn{
+    z-index: 5;
+}
+
 #clear-btn{
     opacity:0;
 }
 
 #print-btn{
     top:160px;
+}
+
+/* print button in mobile */
+
+@media screen and (max-width: 943px){
+    #print-btn{
+        top:25px;
+    }
+
+    .logo{
+        width:80px;
+        height:80px;
+        left:20px;
+        top:20px;
+    }
 }
 
 .close-submit{
