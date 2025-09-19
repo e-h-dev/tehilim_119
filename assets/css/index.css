@@ -44,8 +44,9 @@ p{
     padding-left: 50px;
 }
 
-.col-3,
+.col-1,
 .col-2,
+.col-3,
 .col-lg-6,
 .col-8{
     background-color: #e2e1e1;
@@ -122,13 +123,6 @@ button{
     cursor: pointer;
 }
 
-/* .close-submit:hover{
-    animation: spin 2s;
-}
-
-@keyframes spin {
-   50%{transform: rotate(360deg);}
-} */
 
 .close-submit:hover{
     color:black;
@@ -140,4 +134,39 @@ button{
     #clear-btn{
        display:none;
     }
+
+    .shadow{box-shadow:none !important;}
 }
+
+
+/* mobile sizing */
+
+@media screen and (max-width: 600px){
+
+    header{
+        height:100px;
+    }
+
+    h1, h3{
+        padding-top:30px;
+        font-size:large;
+    }
+
+    #print-btn{
+        top:23px;
+        right:60px;
+    }
+
+    .logo{
+        width:70px;
+        height:70px;
+        left:10px;
+        top:10px;
+    }
+
+    .main, .selected{
+        padding:15px;
+        font-size:0.8rem;
+    }
+}
+
