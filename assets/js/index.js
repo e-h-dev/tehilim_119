@@ -248,7 +248,7 @@ function closeSubmit(){
 // main function to run program
 function mainEngine(){
     //closes loaded text
-    mainLoad.style = "display:none";
+    mainLoad.innerText = "";
 
     // variable to retrieve user input
     let submission = document.getElementById("interact").value;
@@ -289,6 +289,7 @@ function mainEngine(){
     document.getElementById("submit-btn").style = "display:none";
     // reveals clear button
     document.getElementById("clear-btn").style = "opacity:1";
+    document.getElementById("copy-btn").style = "opacity:1";
     // as above for mobile
     document.getElementById("submit-btn-mob").style = "display:none";
     document.getElementById("clear-btn-mob").style = "opacity:1";
@@ -301,5 +302,18 @@ function clearLoad(){
 function printText(){
     window.print()
     document.getElementsByClassName("btn").style = "display:none";
+}
+
+
+// function to allow user to copy text
+function copySelectedText(){
+    var myText = document.getElementById("selected");
+    function findElement(childelem){
+        var myCopy = childelem.innerText || childelem.textContent
+        navigator.clipboard.writeText(myCopy);
+    }
+    findElement(myText);
+    
+    alert('coppied the text')
 }
 

@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-4"></div>
             <div class="col-4">
-                <div class="input-area shadow">
+                <div class="input-area shaded-border">
                     <input type="text" id="interact" name="input" class="input-box">
                     <label for="input">Add Name Here</label>
                     <button type="button" id="interact" name="input" class="btn btn-secondary send-btn" onclick="mainEngine()">Submit</button>
@@ -33,7 +33,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-2">
-                    <a href="index.html"><img src="assets/images/logo2.jpg" class="logo shadow" alt="tehilim logo"></a>
+                    <a href="index.html"><img src="assets/images/logo2.jpg" class="logo shaded-border" alt="tehilim logo"></a>
                 </div>
                 <div class="col-10 mt-4">
                     <div class="d-block d-lg-none">
@@ -61,7 +61,7 @@
             <div class="row">
                 <div class="col-1 col-md-2 col-lg-3"></div>
                 <div class="col-10 col-md-8 col-lg-6">
-                    <div class="text-area shadow">
+                    <div class="text-area shaded-border">
                         <h1>תהלים פרק קי"ט</h1>
                         <h3 id="submitted-name"></h3>
                     </div>
@@ -85,11 +85,14 @@
                         <button type="button" id="print-btn" class="btn btn-secondary btn-lg" onclick="printText()">
                             Print
                         </button>
+                        <button type="button" id="copy-btn" class="btn btn-secondary btn-lg" onclick="copySelectedText()">
+                            Copy
+                        </button>
                     </div>      
                 </div>
                 <div class="col-10 col-md-8 col-lg-6">
                     <!-- div displaying all the tehilim of perek 119 on load -->
-                    <div class="text-area shadow">
+                    <div class="text-area shaded-border">
                         <div class="main">
                        <div id="main-load">
                          <p>א. אַשְׁרֵי תְמִימֵי־דָרֶךְ הַהֹלְכִים בְּתוֹרַת יְהוָה׃
@@ -300,7 +303,11 @@
             </div>
         </div>
     </section>
-    <footer></footer>
+    <footer>
+        <p>
+            All rights reserved <a href="https://e-hammond-7f6468517ddb.herokuapp.com/" target="_blank">Eli Hammond</a>
+        </p>    
+    </footer>
     <script src="assets/js/index.js"></script>
 </body>
 </html>
