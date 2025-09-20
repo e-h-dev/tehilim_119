@@ -18,9 +18,10 @@
         <div class="row">
             <div class="col-4"></div>
             <div class="col-4">
-                <div class="input-box">
-                    <input type="text" id="interact" name="input">
-                    <button type="button" id="interact" name="input" class="btn btn-secondary" onclick="mainEngine()">Submit Here</button>
+                <div class="input-area shadow">
+                    <input type="text" id="interact" name="input" class="input-box">
+                    <label for="input">Add Name Here</label>
+                    <button type="button" id="interact" name="input" class="btn btn-secondary send-btn" onclick="mainEngine()">Submit</button>
                 </div>
             </div>
             <div class="col-4">
@@ -38,10 +39,10 @@
                     <div class="d-block d-lg-none">
                         <div class="row">
                             <div class="col-6">
-                                <button type="button" id="submit-btn" class="btn btn-secondary btn-sm" onclick="createSubmit()">
+                                <button type="button" id="submit-btn-mob" class="btn btn-secondary btn-sm" onclick="createSubmit()">
                                     Click here to submit name
                                 </button>
-                                <button type="button" id="clear-btn" class="btn btn-secondary btn-sm" onclick="clearLoad()">Clear</button>
+                                <button type="button" id="clear-btn-mob" class="btn btn-secondary btn-sm" onclick="clearLoad()">Clear</button>
                             </div>
                             <div class="col-6">
                                 <button type="button" id="print-btn" class="btn btn-secondary btn-sm print-btn-md" onclick="printText()">

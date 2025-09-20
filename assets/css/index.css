@@ -76,12 +76,35 @@ button{
     
 }
 
-.input-box{
-    height:100px;
-    width:300px;
+.input-area{
+    height:240px;
+    width:450px;
     background-color: #fff;
     position: relative;
+    border-radius: 20px;
+    padding:20px;
     top:50vh;
+}
+
+.input-box{
+    width:400px;
+    height:50px;
+    border:none;
+    border-radius: 20px;
+    background-color: #727070;
+    position: relative;
+    top:100px;
+}
+
+.input-box:focus{
+    background-color: #e2e1e1;
+    border: #e2e1e1;
+}
+
+.send-btn{
+    top:115px;
+    left:220px;
+    position: relative;
 }
 
 #submit-btn{
@@ -135,7 +158,7 @@ button{
        display:none;
     }
 
-    .shadow{box-shadow:none !important;}
+    .shadow{box-shadow:white !important;}
 }
 
 

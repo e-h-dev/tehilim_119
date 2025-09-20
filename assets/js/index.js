@@ -285,8 +285,13 @@ function mainEngine(){
     }
     closeSubmit();
     newHeader();
+    // removes submit button to submit name
     document.getElementById("submit-btn").style = "display:none";
+    // reveals clear button
     document.getElementById("clear-btn").style = "opacity:1";
+    // as above for mobile
+    document.getElementById("submit-btn-mob").style = "display:none";
+    document.getElementById("clear-btn-mob").style = "opacity:1";
 }
 
 function clearLoad(){
