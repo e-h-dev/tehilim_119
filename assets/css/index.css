@@ -107,11 +107,17 @@ button{
     position: relative;
 }
 
-#submit-btn{
+#submit-btn,
+#submit-btn-mob{
     z-index: 5;
 }
 
+#submit-btn-mob{
+    position: relative;
+}
+
 #clear-btn,
+#clear-btn-mob,
 #copy-btn{
     opacity:0;
 }
@@ -142,6 +148,11 @@ button{
         left:20px;
         top:20px;
     }
+
+    .input-area{
+        top:30vh;
+    }
+
 }
 
 .close-submit{
@@ -160,6 +171,8 @@ button{
 .close-submit:hover{
     color:black;
 }
+
+
 
 @media print{
     #print-btn,
@@ -187,6 +200,7 @@ button{
         padding-top:30px;
         font-size:large;
     }
+    
 
     #print-btn{
         top:23px;
@@ -198,11 +212,41 @@ button{
         height:70px;
         left:10px;
         top:10px;
+        position: relative;
     }
 
     .main, .selected{
         padding:15px;
         font-size:0.8rem;
+    }
+
+    #submit-btn-mob,
+    #clear-btn-mob{
+        left:20px
+    }
+
+    #clear-btn-mob{
+        left:150px
+    }
+
+    .input-area{
+        height:220px;
+        width:280px;
+        left:40px;
+    }
+
+    .input-box{
+        width:250px;
+        height:40px;
+        border:none;
+        border-radius: 20px;
+        background-color: #727070;
+        position: relative;
+        top:100px;
+    }
+
+    .send-btn{
+        left:50px;
     }
 }
 
