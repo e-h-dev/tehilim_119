@@ -2,6 +2,7 @@ header,
 footer{
     background-color: #e2e1e1;
     height:70px;
+    font-family: Roboto;
 }
 
 .full-height{
@@ -62,6 +63,7 @@ p{
 
 button{
     position: fixed;
+    font-family: Roboto;
     
 }
 
@@ -86,6 +88,7 @@ button{
     border-radius: 20px;
     padding:20px;
     top:50vh;
+    font-family: Roboto;
 }
 
 .input-box{
@@ -135,6 +138,20 @@ button{
 
 .shaded-border{
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15)
+}
+
+.copright{
+    text-align: center;
+    margin-top:10px
+}
+
+.nishmas-box{
+    text-align: center;
+    margin-top:10px;
+    background-color: #494646;
+    color:#fff;
+    border-radius: 20px;
+    height:20px;
 }
 
 /* print button in mobile */

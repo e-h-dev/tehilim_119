@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="icon" href="assets/images/logo2.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <title>תהלים פרק קי"ט</title>
 </head>
@@ -22,7 +24,7 @@
             <div class="col-10 col-md-8 col-lg-4">
                 <div class="input-area shaded-border">
                     <input type="text" id="interact" name="input" class="input-box">
-                    <label for="interact">Add Name Here</label>
+                    <label for="interact">Add Name Below</label>
                     <button type="button" id="interact" name="input" class="btn btn-secondary send-btn" onclick="mainEngine()">Submit</button>
                 </div>
             </div>
@@ -313,9 +315,22 @@
         </div>
     </section>
     <footer>
-        <p>
-            All rights reserved <a href="https://e-hammond-7f6468517ddb.herokuapp.com/" target="_blank">Eli Hammond</a>
-        </p>    
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-3">
+                    <div class="copyright">
+                        All rights reserved <a href="https://e-hammond-7f6468517ddb.herokuapp.com/" target="_blank">Eli Hammond</a>
+                    </div> 
+                </div>
+                <div class="col-4">
+                    <div class="nishmas-box">
+                        לעלוי נשמת האשה החשובה לאה בת ר' שלום ע"ה
+                    </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>   
     </footer>
     <script src="assets/js/index.js"></script>
 </body>
