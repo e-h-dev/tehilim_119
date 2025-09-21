@@ -47,6 +47,8 @@ p{
 .col-1,
 .col-2,
 .col-3,
+.col-4,
+.col-lg-4,
 .col-lg-6,
 .col-8{
     background-color: #e2e1e1;
@@ -72,9 +74,9 @@ button{
     width:100%;
     position: fixed;
     top:-100px;
-    z-index: 2;
-    
+    z-index: 8;
 }
+
 
 .input-area{
     height:240px;
