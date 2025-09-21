@@ -314,6 +314,6 @@ function copySelectedText(){
     }
     findElement(myText);
     
-    alert('coppied the text')
+    alert('Your Tehilim has been copied')
 }
 
