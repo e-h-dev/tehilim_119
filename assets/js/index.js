@@ -289,10 +289,12 @@ function mainEngine(){
     document.getElementById("submit-btn").style = "display:none";
     // reveals clear button
     document.getElementById("clear-btn").style = "opacity:1";
-    document.getElementById("copy-btn").style = "opacity:1";
+    // reveals copy button
+    document.getElementById("copy-btn").style = "display:block";
     // as above for mobile
     document.getElementById("submit-btn-mob").style = "display:none";
     document.getElementById("clear-btn-mob").style = "opacity:1";
+    document.getElementById("copy-btn-mob").style = "display:block";
 }
 
 function clearLoad(){

@@ -122,9 +122,13 @@ button{
 }
 
 #clear-btn,
-#clear-btn-mob,
-#copy-btn{
+#clear-btn-mob{
     opacity:0;
+}
+
+#copy-btn,
+#copy-btn-mob{
+    display: none;
 }
 
 #print-btn,
@@ -134,6 +138,10 @@ button{
 
 #copy-btn{
     left:100px;
+}
+
+#copy-btn-mob{
+    left:400px;
 }
 
 .shaded-border{
@@ -246,6 +254,10 @@ button{
 
     #clear-btn-mob{
         left:150px
+    }
+
+    #copy-btn-mob{
+        left:250px;
     }
 
     .input-area{
