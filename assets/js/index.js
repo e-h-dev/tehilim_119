@@ -285,6 +285,8 @@ function mainEngine(){
     }
     closeSubmit();
     newHeader();
+    // sheimos removal toggle button
+    document.getElementById("sheimos").style = "display:block"
     // removes submit button to submit name
     document.getElementById("submit-btn").style = "display:none";
     // reveals clear button
@@ -317,5 +319,32 @@ function copySelectedText(){
     findElement(myText);
     
     alert('Your Tehilim has been copied')
+}
+
+
+// removes the name of Hashem for printing
+function removeShem() {
+    let myText = document.getElementById("selected");
+    myText.innerHTML = myText.innerHTML.replace(/יְהוָה/g, "ה'");
+    myText.innerHTML = myText.innerHTML.replace(/יהוָה/g, "ה'");
+    myText.innerHTML = myText.innerHTML.replace(/אֱלֹהָי/g, "אֱלֹקָי");
+    document.getElementById("sheimos").innerHTML = `<p>Remove Sheimos?</p>
+                        <div class="sheimos-return-btn" id="shem-return-btn" onclick="returnShem()">
+                            <div class="sheimos-return-toggle" id="shem-return-tog">
+                            </div>
+                        </div>`
+}
+
+// removes the name of Hashem for printing
+function returnShem() {
+    let myText = document.getElementById("selected");
+    myText.innerHTML = myText.innerHTML.replace(/ה'/g, " יְהוָה");
+    myText.innerHTML = myText.innerHTML.replace(/ה'/g, " יהוָה");
+    myText.innerHTML = myText.innerHTML.replace(/אֱלֹקָי/g, "אֱלֹהָי");
+    document.getElementById("sheimos").innerHTML = `<p>Remove Sheimos?</p>
+                        <div class="sheimos-btn" id="shem-btn" onclick="removeShem()">
+                            <div class="sheimos-toggle" id="shem-tog">
+                            </div>
+                        </div>`
 }
 

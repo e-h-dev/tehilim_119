@@ -162,6 +162,53 @@ button{
     height:20px;
 }
 
+/* button to remove sheimos */
+
+#sheimos{
+    display:none;
+}
+
+.sheimos{
+    top:300px;
+    position: relative;
+}
+
+.sheimos-btn{
+    background-color: #e2dada;
+    border:solid 0.5px #5a6268
+}
+
+.sheimos-return-btn{
+    background-color: #5a6268;
+}
+
+.sheimos-btn,
+.sheimos-return-btn{
+    height:30px;
+    width:80px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.sheimos-toggle{
+    left:5px;
+}
+
+.sheimos-return-toggle{
+    left:55px;
+}
+
+.sheimos-toggle,
+.sheimos-return-toggle{
+    position: relative;
+    top:4px;
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
 /* print button in mobile */
 
 @media screen and (max-width: 943px){
@@ -207,8 +254,10 @@ button{
     #clear-btn,
     #submit-btn-mob,
     #clear-btn-mob,
+    #sheimos,
+    #copy-btn,
     .logo{
-       display:none;
+       display:none !important;
     }
 
     .shadow{box-shadow:white !important;}
