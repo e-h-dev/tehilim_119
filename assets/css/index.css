@@ -166,6 +166,7 @@ button{
 
 #sheimos{
     display:none;
+    position: fixed;
 }
 
 .sheimos{
