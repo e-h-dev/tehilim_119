@@ -348,3 +348,16 @@ function returnShem() {
                         </div>`
 }
 
+document.getElementById("download-pdf").addEventListener("click", () => {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+
+  const versesText = document.getElementById("selected").innerText;
+
+  doc.setFont("Helvetica");
+  doc.setFontSize(12);
+  doc.text(versesText, 10, 10, { maxWidth: 180 });
+
+  doc.save("Tehillim_119_Pessukim.pdf");
+});
+
